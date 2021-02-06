@@ -1,0 +1,93 @@
+$bc: "background-color";
+
+@font-face
+{
+    font-family: vazir;
+    src: url(../font/Vazir-FD.ttf) format(truetype);
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section
+{
+    #{$bc}: #e8e8e8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-container
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 20vw;
+        height: 100vh;
+        border-right: 3px solid yellowgreen;
+
+        button{
+            margin-top: 20px;
+        }
+
+        hr{
+            width: 15vw;
+            border: 2px solid #f2d974;
+            margin-top: 10vh;
+        }
+
+        .owner{
+            font-size: 1.2rem;
+            font-family: 'poppins' , sans-serif;
+            text-align: center;
+            margin-top: 5vh;
+        }
+
+        .owner-persian{
+            font-size: 1.2rem;
+            font-family: vazir;
+            text-align: center;
+            font-weight: 400;
+            margin-top: 5vh;
+        }
+    }
+
+
+    .container
+    {
+        width: 70vw;
+        height: 90vh;
+        font-family: vazir;
+        font-size: 1.1rem;
+        text-align: justify;
+        direction: rtl;
+        border-radius: 5px;
+        overflow: scroll;
+        padding: 1rem;
+        overflow-x: hidden;
+        
+        &::-webkit-scrollbar{
+            width: 0.5vw;
+        }
+        &::-webkit-scrollbar-track{
+            #{$bc}: none;
+        }
+        &::-webkit-scrollbar-thumb{
+            border: solid 2px #f05454;
+            border-radius: 25px;
+        }
+    }
+}
+
+
+section.dark{
+    #{$bc}: #393e46;
+    color: white;
+    
+}

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: vazir;
+  src: url(../font/Vazir-FD.ttf) format(truetype);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  background-color: #e8e8e8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 20vw;
+  height: 100vh;
+  border-right: 3px solid yellowgreen;
+}
+.section .btn-container button {
+  margin-top: 20px;
+}
+.section .btn-container hr {
+  width: 15vw;
+  border: 2px solid #f2d974;
+  margin-top: 10vh;
+}
+.section .btn-container .owner {
+  font-size: 1.2rem;
+  font-family: "poppins", sans-serif;
+  text-align: center;
+  margin-top: 5vh;
+}
+.section .btn-container .owner-persian {
+  font-size: 1.2rem;
+  font-family: vazir;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 5vh;
+}
+.section .container {
+  width: 70vw;
+  height: 90vh;
+  font-family: vazir;
+  font-size: 1.1rem;
+  text-align: justify;
+  direction: rtl;
+  border-radius: 5px;
+  overflow: scroll;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+.section .container::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.section .container::-webkit-scrollbar-track {
+  background-color: none;
+}
+.section .container::-webkit-scrollbar-thumb {
+  border: solid 2px #f05454;
+  border-radius: 25px;
+}
+
+section.dark {
+  background-color: #393e46;
+  color: white;
+}
