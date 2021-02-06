@@ -12,15 +12,10 @@ const btnCopy = document.querySelector(".copy-text");
 //Add Event Click to btn clear
 btnClear.addEventListener("click" , clear);
 
-//Add Event click to copy in clipboard
-btnCopy.addEventListener("click" , copy);
-
 //Add window Speech Recognition
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-//تعریف یک ویندو اسپیچ رکوگنیشن
 const recognition = new SpeechRecognition();
-//قرار دادن زبان فارسی برای این ویندو رکوگنیشن جدید
 recognition.lang = 'fa-IR';
 
 recognition.interimResults = true;
@@ -83,9 +78,4 @@ recognition.addEventListener("result" , (e)=>{
 function clear()
 {
     span.innerHTML = "";
-}
-
-function copy()
-{
-    p.select();
 }
