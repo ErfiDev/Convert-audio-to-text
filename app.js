@@ -1,6 +1,5 @@
 window.onload = alert("لطفا از اتصال به اینترنت مطئن شوید..."); 
 
-//DOM
 const section = document.querySelector(".section");
 const container = document.querySelector('.container');
 const p = document.createElement("p");
@@ -9,23 +8,18 @@ span.classList.add("spanC");
 const btnClear = document.querySelector(".clear-text");
 const btnCopy = document.querySelector(".copy-text");
 
-//Add Event Click to btn clear
 btnClear.addEventListener("click" , clear);
 
-//Add window Speech Recognition
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'fa-IR';
 
 recognition.interimResults = true;
-//شروع این مبحث
 recognition.start();
 
-//فانکشن ای که بعد از تمام شدن فانکشن ریزولت دوباره ان را صدا میزند
 recognition.addEventListener('end' , recognition.start);
 
-//فانکش ای که به رکوگنیشن مان دادیم
 recognition.addEventListener("result" , (e)=>{
 
     container.appendChild(p);
